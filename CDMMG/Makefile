@@ -1,5 +1,6 @@
-HEADERS =-I./ -I/usr/local/include/ -I/home/dbrg/APPS/boost_1_64_0/include
-LIBS =-L./ -L/usr/local/lib -L/home/dbrg/APPS/boost_1_64_0/stage/lib
+HEADERS =-I./ -I/usr/include/ -I/usr/include/boost/include -I/usr/include/gdal/
+LIBS =-L./ -L/usr/lib -L/usr/lib
+
 
 facilityAccess:  facilityaccess.cpp
 	mpicxx $(HEADERS) $(LIBS) -std=c++11 -fopenmp -Wall -O3 -o facilityAccess facilityaccess.cpp -lgdal -lmpi
